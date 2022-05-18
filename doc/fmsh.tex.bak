@@ -1,0 +1,41 @@
+\documentclass{bmstu}
+\usepackage{xparse}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\begin{document}
+
+\tableofcontents
+
+
+
+
+\chapter{Что такое компьютер}
+\section{Немного истории}
+
+
+\chapter{Основы языка Си}
+\section{Статические типы данных}
+\subsection{Простые типы данных}
+\subsection{Статические массивы}
+\subsection{Текстовые строки}
+\subsection{Структуры}
+\section{Условные операторы}
+\section{Циклы}
+\section{Процедуры и функции}
+\section{Рекурсия}
+\section{Динамические типы данных}
+\subsection{Динамичесике массивы}
+\subsection{Списки}
+\subsubsection{Очередь}
+\subsubsection{Стек}
+\section{Задачи}
+
+\chapter{С++}
+\section{Отличие Си и С++}
+\section{Три столпа ООП}
+\section{}
+
+
+
+\end{document}
+
