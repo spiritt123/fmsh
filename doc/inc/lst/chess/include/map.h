@@ -14,6 +14,9 @@ public:
     const std::vector<std::vector<ChessPiece*>> getMap();
 
 private:
+    void Init();
+
+private:
     std::vector<std::vector<ChessPiece*>> _map;
 };
 
