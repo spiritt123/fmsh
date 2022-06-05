@@ -4,23 +4,16 @@
 #include <string>
 
 #include "map.h"
-#include "types_chess_piece.h"
+#include "enums.h"
 
 std::map<TypesChessPiece, std::string> chares =
     {
-        {WHITE_PAWN,   "wp"},
-        {WHITE_KNIGHT, "wl"},
-        {WHITE_BISHOP, "wb"},
-        {WHITE_ROOK,   "wr"},
-        {WHITE_QUEEN,  "wq"},
-        {WHITE_KING,   "wk"},
-
-        {BLACK_PAWN,   "bp"},
-        {BLACK_KNIGHT, "bl"},
-        {BLACK_BISHOP, "bb"},
-        {BLACK_ROOK,   "br"},
-        {BLACK_QUEEN,  "bq"},
-        {BLACK_KING,   "bk"},
+        {PAWN,   "p"},
+        {KNIGHT, "l"},
+        {BISHOP, "b"},
+        {ROOK,   "r"},
+        {QUEEN,  "q"},
+        {KING,   "k"},
     }; 
 
 void print(Map &map)
@@ -36,6 +29,7 @@ void print(Map &map)
             }
             else
             {
+                std::cout << ((element->getColor() == ColorChessPiece::WHITE) ? 'w' : 'b');
                 std::cout << chares[element->getType()] <<" ";
             }
         }
@@ -47,8 +41,14 @@ void print(Map &map)
 int main()
 {
     Map map;
+    std::string move;
 
-    print(map);
+    while (1)
+    {
+        print(map);
+        std::cin >> move;
+        map.tryMove(move);
+    }
 
     return 0;
 }

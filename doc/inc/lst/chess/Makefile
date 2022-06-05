@@ -4,8 +4,13 @@ LDFLAGS =
 INCLUDE = include 
 INCLUDE_MATRIX = ../matrix/include 
 
-SRC = main map chess_piece
-#STATIC_LIBS = ../matrix/matrix.a
+SRC = main map chess_piece \
+	chess_rule_for_king \
+	chess_rule_for_pawn \
+	chess_rule_for_rook \
+	chess_rule_for_bishop \
+	chess_rule_for_knight \
+	chess_rule_for_queen 
 SOURCES = $(addsuffix .cpp, $(addprefix src/, $(SRC))) $(STATIC_LIBS)
 OBJECTS = $(SOURCES:.cpp=.o) 
 EXECUTABLE = chess.out
