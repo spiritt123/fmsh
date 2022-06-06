@@ -20,11 +20,11 @@ enum ColorChessPiece
 
 enum TypesChessPiece
 {
-    PAWN,
-    KNIGHT,
-    BISHOP,
-    ROOK,
+    KING,
     QUEEN,
-    KING
+    ROOK,
+    BISHOP,
+    KNIGHT,
+    PAWN
 };
 
